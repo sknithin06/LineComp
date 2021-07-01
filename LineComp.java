@@ -1,5 +1,6 @@
 package Java;
-import java.util.*;  
+import java.util.*;
+import java.lang.Double;
 public class LineComp {
 	public static void main(String[] args) {
 		System.out.println("Welcome to line Problem ");
@@ -36,6 +37,27 @@ public class LineComp {
 		else
 			System.out.println("Lines are not identical");
 		
+		System.out.print("Enter first number- ");  
+		double m1=sc.nextInt();  
+		System.out.print("Enter second number- ");  
+		double m2=sc.nextInt();  
+		System.out.print("Enter third number- ");  
+		double n1= sc.nextInt();  
+		System.out.print("enter fourth number-");
+		double n2= sc.nextInt();
 		
+		double g1 = (y2 - y1) * m1 + (x1 - x2) * n1
+                + (x2 * y1 - x1 * y2);
+		double g2 = (y2 - y1) * m2 + (x1 - x2) * n2
+                + (x2 * y1 - x1 * y2);;
+         if (Double.compare(g1, g2) == 0) {
+        	 System.out.println("Both lines are equal");
+         }
+         else if (Double.compare(g1, g2) < 0) {        
+        	 System.out.println("One line is lesser than another line");
+         }
+         else {
+        	 System.out.println("One is greater than another line");
+         }
 	}
 }
